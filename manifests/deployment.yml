@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kapilnew 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kapilnew
+  template:
+    metadata:
+      labels:
+        app: kapilnew 
+    spec:
+      containers:
+        - name: kapilnew 
+          image: razeop.azurecr.io/kapilnew
+          ports:
+          - containerPort: 8080
